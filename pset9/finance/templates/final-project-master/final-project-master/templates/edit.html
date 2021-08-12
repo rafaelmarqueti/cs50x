@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="15">{{ note[0]["note"] }}</textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-light">Save</button>
+    </form>
+{% endblock %}

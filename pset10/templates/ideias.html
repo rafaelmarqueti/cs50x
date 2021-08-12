@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+           document.addEventListener('DOMContentLoaded', function(){
+               let correct_button = document.querySelector("#correct");
+               let incorrect_buttons = document.querySelectorAll(".incorrect");
+               let massage = document.querySelector("#massage");
+               
+               correct_button.addEventListener('click', function(){
+                   correct_button.style.backgroundColor = "green";
+                   massage.innerHTML = "Correct";
+                   
+               })
+               for (let i = 0; i < incorrect_buttons.length; i++)
+               {
+                   incorrect_buttons[i].addEventListener('click', function(){
+                       incorrect_buttons[i].style.backgroundColor = "red";
+                       massage.innerHTML = "Incorrect";
+                   })
+               }
+               document.querySelector("#free-button").addEventListener('click', function(){
+                   let input = document.querySelector("input");
+                   let massage_free = document.querySelector("#free-massage");
+                   if (input.value == "Brasilia")
+                   {
+                       input.style.color = "green";
+                       massage_free.innerHTML = "correct";
+                   }
+                   else
+                   {
+                       input.style.color = "red";
+                       massage_free.innerHTML = "Incorrect";
+                   }
+               })
+           });
+
+            // TODO: Add code to check answers to questions
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Questões!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2> Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>1 - Meu filho está _________ com os brinquedos dele.</h3>
+                <button class="incorrect"> intretido</button>
+                <button class="incorrect">intertido</button>
+                <button class="incorrect">entertido</button>
+                <button class="incorrect"> intretido</button>
+                <button id="correct">entretido</button>
+                <p id="message"></p>
+            </div>
+            
+            
+            <div class="container">
+
+            <div class="section">
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3> 2 - Tolher alguém significa</h3>
+                <button class="incorrect"> cortar o seu cabelo</button>
+                <button class="incorrect">elogiar o seu modo de vestir</button>
+                <button class="incorrect">impedir a pessoa de fazer algo</button>
+                <button class="incorrect">incentivar a pessoa a praticar esportes</button>
+                <button id="correct">incentivar a pessoa a praticar esportes</button>
+                <p id="message"></p>
+            </div>
+            
+            
+            
+            <div class="container">
+
+            <div class="section">
+               
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>3 - Carlos é um cara matreiro! Isso significa que Carlos é...</h3>
+                <button class="incorrect">triste, aborrecido</button>
+                <button class="incorrect">alto, esguio</button>
+                <button class="incorrect">estúpido, burro</button>
+                <button id="correct">feliz, alegre</button>
+                <p id="message"></p>
+            </div>
+            
+            
+            <div class="container">
+
+            <div class="section">
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>4 - Resignado é o mesmo que...</h3>
+                <button class="incorrect">confirmado</button>
+                <button class="correct">conformado</button>
+                <button class="incorrect">contornado</button>
+                <button class="incorrect">confinado</button>
+                <button id="incorrect">confiado</button>
+                <p id="message"></p>
+            </div>
+            
+            
+        
+            <div class="container">
+            <div class="section">
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>5 - Um evento dedicado à caridade é chamado de evento...</h3>
+                <button class="incorrect">beneficiente</button>
+                <button class="incorrect">deficiente</button>
+                <button class="incorrect">eficiente</button>
+                <button class="correct">beneficente</button>
+                <button id="incorrect">descendente</button>
+                <p id="message"></p>
+            </div>
+            
+            <div class="container">
+                <h2>Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Qual a capital do Brasil</h3>
+                <input type="text">
+                <button id="free-button">Check Answer</button>
+                <p id="free-massage"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+
+{% endblock %}

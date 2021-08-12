@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+
+    <form action="/edit/{{ title }}" method="post">
+        <div class="form-group">
+            <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="15" disabled>{{ note[0]["note"] }}</textarea>
+        </div>
+    
+        <button onclick="location.href='/edit/{{ title }}'" type="button" class="btn btn-light">Edit</button>
+    </form>
+{% endblock %}

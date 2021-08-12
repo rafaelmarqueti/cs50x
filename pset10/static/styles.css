@@ -1,0 +1,20 @@
+.container
+{
+    margin-top: 10px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.form-group
+{
+    margin-top: 15px;
+}
+
+.form-control
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

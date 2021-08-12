@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>My Notes</h1>
+    <form action="/review" method="post">
+        <select name="title" id="title" class="form-control" style="margin-top: 20px;">
+            {% for row in rows %}
+                <option value="{{ row["title"] }}">{{ row["title"] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-light" style="margin-top: 10px;">Submit</button>
+    </form>
+{% endblock %}
+

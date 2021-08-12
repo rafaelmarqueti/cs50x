@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Ideia</title>
+
+        <script>
+           document.addEventListener('DOMContentLoaded', function(){
+               let correct_button = document.querySelector("#correct");
+               let incorrect_buttons = document.querySelectorAll(".incorrect");
+               let massage = document.querySelector("#massage");
+               
+               correct_button.addEventListener('click', function(){
+                   correct_button.style.backgroundColor = "green";
+                   massage.innerHTML = "Correct";
+                   
+               })
+               for (let i = 0; i < incorrect_buttons.length; i++)
+               {
+                   incorrect_buttons[i].addEventListener('click', function(){
+                       incorrect_buttons[i].style.backgroundColor = "red";
+                       massage.innerHTML = "Incorrect";
+                   })
+               }
+               document.querySelector("#free-button").addEventListener('click', function(){
+                   let input = document.querySelector("input");
+                   let massage_free = document.querySelector("#free-massage");
+                   if (input.value == "Brasilia")
+                   {
+                       input.style.color = "green";
+                       massage_free.innerHTML = "correct";
+                   }
+                   else
+                   {
+                       input.style.color = "red";
+                       massage_free.innerHTML = "Incorrect";
+                   }
+               })
+           });
+
+            // TODO: Add code to check answers to questions
+
+        </script>
+
+    </head>
+    <body>
+
+
+
+
+ <div class="container">
+                <h2>Perguntas para organizar sua ideia </h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Qual é o objetivo do meu livro?</h3>
+                <input  <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="20"></textarea>
+                
+                
+                <p id="free-massage"></p>
+
+            </div>
+            
+            <div class="container">
+                
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                             <h3>Por que meu leitor vai se importar com o livro?</h3>
+                <input  <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="20"></textarea>
+                
+                
+                <p id="free-massage"></p>
+
+            </div>
+            
+            
+            <div class="container">
+                
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Como minha abordagem é diferente?</h3>
+                <input  <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="20"></textarea>
+                
+                
+                <p id="free-massage"></p>
+
+            </div>
+            
+            
+             <div class="container">
+                
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Quando vou publicar meu livro?</h3>
+                <input  <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="20"></textarea>
+                
+               
+                <p id="free-massage"></p>
+
+            </div>
+
+
+        </div>
+    </body>
+</html>
+{% endblock %}

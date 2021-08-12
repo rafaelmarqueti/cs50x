@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote Of {{ symbol }}
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="alert alert-primary" role="alert">
+          The current price of a {{ symbol }} share is: {{ price }}
+        </div>
+        <div>
+           <a href="/buy"><button type="button" class="btn btn-success">Buy some shares of {{ symbol }}</button></a>
+        </div>
+    </div>
+{% endblock %}

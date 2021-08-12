@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>New Note</h1>
+
+    <form action="/new_note" method="post">
+        <div class="form-group">
+            <input class="form-control" name="title" id="exampleFormControlTextarea3" placeholder="Title">
+            <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="15"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-light">Submit</button>
+    </form>
+{% endblock %}

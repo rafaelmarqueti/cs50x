@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="p-3 mb-2 bg-dark text-white">
+    <h1>my project book</h1>
+
+    <form action="/new_note" method="post">
+        
+        <div class="form-group">
+            <input class="form-control" name="title" id="exampleFormControlTextarea3" placeholder="Title">
+            <textarea class="form-control" name="note" id="exampleFormControlTextarea3" rows="20"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
+    </form>
+    </div>
+{% endblock %}

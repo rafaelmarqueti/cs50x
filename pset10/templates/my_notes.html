@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="p-3 mb-2 bg-dark text-white">
+    <h1>My book</h1>
+    <form action="/review" method="post">
+        <div class="card" style="width: 18rem;">
+    <img src="static/projscts.png" class="card-img-top" alt="logo">
+    <div class="card-body">
+    <h5 class="card-title">Selecione o seu livro</h5>
+    <select name="title" id="title" class="form-control" style="margin-top: 20px;">
+            {% for row in rows %}
+                <option value="{{ row["title"] }}">{{ row["title"] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-success" style="margin-top: 10px;">Submit</button>
+    </div>
+    </div>
+    </div>
+{% endblock %}

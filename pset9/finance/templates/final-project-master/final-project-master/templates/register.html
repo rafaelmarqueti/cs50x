@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}  
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <div class="input-group mb-3">
+            <input type="username" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" style="margin-top: 5px;">
+        </div>
+        <div class="input-group mb-3">
+            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <input type="password" name="confirmation" class="form-control" placeholder="Confirm Password" aria-label="Confirm Password" aria-describedby="basic-addon1">
+        </div>
+        <button type="submit" class="btn btn-light">Submit</button>
+    </form>
+{% endblock %}
